@@ -8,6 +8,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ProdutoComponent } from './produto/produto.component';
+import { SobreComponent } from './sobre/sobre.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    ProdutoComponent,
+    SobreComponent
   ],
   imports: [
     BrowserModule,
