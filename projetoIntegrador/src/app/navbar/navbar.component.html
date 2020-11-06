@@ -27,6 +27,25 @@
             <a class="dropdown-item" href="#">Serviços gerais</a>
           </div>
         </li>
+
+        <div *ngIf='auth.btnLogin()'>
+          <li class="nav-item">
+            <a class="nav-link" routerLink='/login'>Login</a>
+          </li>
+        </div>
+
+        <div *ngIf='auth.btnLogin()'>
+          <li class="nav-item">
+            <a class="nav-link" routerLink='/cadastro'>Cadastro</a>
+          </li>
+        </div>
+
+        <div *ngIf='auth.btnSair()'>
+           <li class="nav-item">
+          <a class="nav-link" (click)='sair()'>Sair</a>
+        </li>
+        </div>
+
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2 br-15" style="border-radius: 15px;" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
