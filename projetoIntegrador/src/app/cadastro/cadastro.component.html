@@ -1,42 +1,33 @@
-<div class="container">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown zero-raduis">
+  	  <div id="formContent">
+  	    <!-- Tabs Titles -->
+
+  	    <!-- Icon -->
+  	    <div class="fadeIn first" style="justify-content: center;">
     
-    <div class="row mt-5 mb-5">
-        <div class="col-md-12">
-            <h1 class="text-center">Cadastrar</h1>
-        </div>
-    </div>
-    <div class="row mb-5 d-flex justify-content-center">
-        <div class="col-md-8">
-        <div>
-            <div class="form-group">
-                <label for="nome">Nome</label>
-                <input type="text" class="form-control" id="nome"
-                placeholder="Digite o seu nome aqui" [(ngModel)] = 'user.nome'>
-            </div>
             
-            <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="email" class="form-control" id="email"
-            placeholder="nome@exemplo.com" [(ngModel)] = 'user.email'>
-            </div>
+  	     
+  	    </div>
 
-            <div class="form-group">
-                <label for="senha">Senha</label>
-                <input type="password" class="form-control" id="senha" placeholder="Digite sua senha"
-                (input) ='conferirSenha($event)' value={{senha}}>
-            </div>
-            
-        <div class="form-group">
-            <label for="senhaConf">Confirmar Senha</label>
-            <input type="password" class="form-control" id="senhaConf" placeholder="Digite a confirmação de senha" [(ngModel)]='user.senha'>
-        </div>
+		  <!-- Login Form -->
+		  <h2 style="margin: 20px;">Faça seu cadastro</h2>
+		  <form>
+		 <input type="text" id="nome" class="fadeIn second zero-raduis" name="nome" placeholder="Entre com seu nome" style="margin: 20px;">
+  	      <input type="email" id="email" class="fadeIn second zero-raduis" name="email" placeholder="Entre com seu email" style="margin: 20px;">
+            <input type="text" id="password" class="fadeIn third zero-raduis" name="password" placeholder="Entre com a senha" style="margin: 20px;">
+            <input type="text" id="password" class="fadeIn third zero-raduis" name="password" placeholder="Confirmar senha" style="margin: 20px;">
+		      <div id="formFooter">
+  	      </div>
+  	      <input type="submit" class="fadeIn fourth" value="Cadastrar-se" style="border-radius: 20px; margin: 30px;">
+  	    </form>
+  	    
 
-        <div class="d-flex justify-content-center">
-            <button class="btn btn-outline-success w-25" (click)=cadastrar()>Cadastrar</button>
-        </div>
-
-        </div>
-    </div>
-</div>
-</div>
+  	  </div>
+  </div>

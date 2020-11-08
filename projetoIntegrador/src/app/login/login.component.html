@@ -1,45 +1,30 @@
-   <div class="row mt-5 mb-5">
-        <div class="col-md-12">
-            <h1 class="text-center">Login</h1>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-        </div>
-    </div>
-    <div class="row mb-5 d-flex justify-content-center">
-        <div class="col-md-6">
-            <div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Endereço de email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1"
-                    aria-describedby="emailHelp" placeholder="Seu email" [(ngModel)]='userLogin.email'>
-                    <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email com ninguém</small>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Senha</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1"
-                    placeholder="Senha" [(ngModel)]='userLogin.senha'>
-                </div>
+<!------ Include the above in your HEAD tag ---------->
 
-               <a routerLink='/cadastro'><small class="form-text text-muted">Não possui cadastro, clique aqui</small></a> 
-                <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn btn-outline-success w-25" (click)='entrar()'>Entrar</button>
-                </div>
+<div class="wrapper fadeInDown zero-raduis">
+  	  <div id="formContent">
+  	    <!-- Tabs Titles -->
 
-        </div>
-    </div>
-</div>
+  	    <!-- Icon -->
+  	    <div class="fadeIn first">
+			<img src="https://i.imgur.com/Kjcuuk4.png" id="icon" alt="User Icon" style="margin-top: 20px; margin-bottom: 20px;">
+			<h4 style="margin-bottom: 20px;">LOGIN</h4>
+  	    </div>
 
-<!--<div class="d-flex">
-<div class="login">
-    <img style="padding-left: 100px; position: absolute;" src="assets/img/user.png" id="user" width="100" height="100" alt="usuario"> 
-    
-    <h1>Login</h1>
-    <form>
-    <p>Usuario</p>
-    <input type="text" name="" placeholder="insira seu nome de usuario">
-    <p>Senha</p>
-    <input type="password" name="" placeholder="insira sua senha">
-    <input type="submit" name="" value="Login">
-    <a href="#">Esqueceu sua senha?</a><br>
-    <a href="#">Ainda não possui conta?</a><br>
-</div>
-</div>-->
+  	    <!-- Login Form -->
+  	    <form>
+  	      <input type="email" id="email" class="fadeIn second zero-raduis" name="email" placeholder="Entre com o e-mail">
+            <input type="text" id="password" class="fadeIn third zero-raduis" name="password" placeholder="Entre com a senha">
+		      <div id="formFooter">
+  	      </div>
+  	      <input type="submit" class="fadeIn fourth" value="login" style="border-radius: 20px; margin-top: 10px;">
+  	      <h2>Não tem uma conta?</h2>
+            <input type="button" class="fadeIn fourth pc" value="Criar conta" style="border-radius: 20px;" routerLink='/cadastro'>
+  	    </form>
+  	    
+
+  	  </div>
+  </div>
