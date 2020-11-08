@@ -1,6 +1,4 @@
-<div class="container">
-
-    <div class="row mt-5 mb-5">
+   <div class="row mt-5 mb-5">
         <div class="col-md-12">
             <h1 class="text-center">Login</h1>
 
@@ -20,6 +18,8 @@
                     <input type="password" class="form-control" id="exampleInputPassword1"
                     placeholder="Senha" [(ngModel)]='userLogin.senha'>
                 </div>
+
+               <a routerLink='/cadastro'><small class="form-text text-muted">Não possui cadastro, clique aqui</small></a> 
                 <div class="d-flex justify-content-center">
                     <button type="submit" class="btn btn-outline-success w-25" (click)='entrar()'>Entrar</button>
                 </div>
@@ -27,4 +27,19 @@
         </div>
     </div>
 </div>
+
+<!--<div class="d-flex">
+<div class="login">
+    <img style="padding-left: 100px; position: absolute;" src="assets/img/user.png" id="user" width="100" height="100" alt="usuario"> 
+    
+    <h1>Login</h1>
+    <form>
+    <p>Usuario</p>
+    <input type="text" name="" placeholder="insira seu nome de usuario">
+    <p>Senha</p>
+    <input type="password" name="" placeholder="insira sua senha">
+    <input type="submit" name="" value="Login">
+    <a href="#">Esqueceu sua senha?</a><br>
+    <a href="#">Ainda não possui conta?</a><br>
 </div>
+</div>-->
