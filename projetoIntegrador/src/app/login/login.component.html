@@ -16,11 +16,11 @@
 
   	    <!-- Login Form -->
   	    <form>
-  	      <input type="email" id="email" class="fadeIn second zero-raduis" name="email" placeholder="Entre com o e-mail">
-            <input type="password" id="password" class="fadeIn third zero-raduis" name="password" placeholder="Entre com a senha">
+  	      <input type="email" id="email" class="fadeIn second zero-raduis" name="email" placeholder="Entre com o e-mail" [(ngModel)]='userLogin.email'>
+            <input type="password" id="password" class="fadeIn third zero-raduis" name="password" placeholder="Entre com a senha" [(ngModel)]='userLogin.senha'>
 		      <div id="formFooter">
   	      </div>
-  	      <input type="submit" class="fadeIn fourth" value="login" style="border-radius: 20px; margin-top: 10px;">
+  	      <input type="submit" class="fadeIn fourth" value="login" style="border-radius: 20px; margin-top: 10px;" (click)='entrar()'>
   	      <h2>Não tem uma conta?</h2>
             <input type="button" class="fadeIn fourth pc" value="Criar conta" style="border-radius: 20px;" routerLink='/cadastro'>
   	    </form>
