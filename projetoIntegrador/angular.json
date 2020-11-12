@@ -25,9 +25,9 @@
             ],
             "styles": [
               "src/styles.css",
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css"              
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-              "scripts": [
+            "scripts": [
               "./node_modules/jquery/dist/jquery.js",
               "./node_modules/bootstrap/dist/js/bootstrap.js"
             ]
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "projetoIntegrador"
+    }
+  },
+  "defaultProject": "projetoIntegrador",
+  "cli": {
+    "analytics": "7afe7cad-505c-4052-82b5-49cbc6feca74"
+  }
 }
