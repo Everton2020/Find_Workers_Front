@@ -14,6 +14,9 @@ import { SobreComponent } from './sobre/sobre.component';
 import { PerfilLateralComponent } from './perfil-lateral/perfil-lateral.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UserPerfilComponent } from './user-perfil/user-perfil.component';
+import { CadastreProdutoComponent } from './cadastre-produto/cadastre-produto.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +28,9 @@ import { HttpClientModule } from '@angular/common/http';
     ProdutoComponent,
     SobreComponent,
     PerfilLateralComponent,
-    CadastroComponent
+    CadastroComponent,
+    UserPerfilComponent,
+    CadastreProdutoComponent
   ],
   imports: [
     BrowserModule,
