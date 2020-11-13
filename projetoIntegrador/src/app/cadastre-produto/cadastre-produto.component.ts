@@ -11,6 +11,9 @@ import { ProdutoService } from '../service/produto.service';
 })
 export class CadastreProdutoComponent implements OnInit {
 
+  key= 'preco'
+  reverse = true
+
   produto: Produto = new Produto()
   listaProdutos: Produto[]
 
@@ -46,5 +49,20 @@ export class CadastreProdutoComponent implements OnInit {
     this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria)=>{
       this.categoria = resp;
     })
+  }
+  publicar(){
+    this.categoria.id = this.idCategoria
+    this.produto.categoria = this.categoria
+
+    if(this.produto.nome ==null || this.produto.descricao == null || this.produto.preco == null ||this.produto.categoria == null){
+      alert ('Preencha todos os campos antes de publicar!!')
+    }else {
+      this.produtoService.postProduto(this.produto).subscribe((resp:Produto)=>{
+        this.produto = resp
+        this.produto = new Produto()
+        alert ('Produto Cadastrado com Sucesso!!')
+        this.findAllProdutos()
+      })
+    }
   }
 }

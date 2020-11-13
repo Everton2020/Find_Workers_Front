@@ -16,6 +16,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserPerfilComponent } from './user-perfil/user-perfil.component';
 import { CadastreProdutoComponent } from './cadastre-produto/cadastre-produto.component';
+import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { CadastreProdutoComponent } from './cadastre-produto/cadastre-produto.co
     PerfilLateralComponent,
     CadastroComponent,
     UserPerfilComponent,
-    CadastreProdutoComponent
+    CadastreProdutoComponent,
+    PostCategoriaComponent
   ],
   imports: [
     BrowserModule,

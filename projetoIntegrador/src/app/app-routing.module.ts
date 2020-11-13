@@ -4,6 +4,7 @@ import { CadastreProdutoComponent } from './cadastre-produto/cadastre-produto.co
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { UserPerfilComponent } from './user-perfil/user-perfil.component';
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'cadastro', component: CadastroComponent},
   { path: 'user-perfil', component: UserPerfilComponent},
-  { path: 'cadastre-produto', component: CadastreProdutoComponent }
+  { path: 'cadastre-produto', component: CadastreProdutoComponent },
+  { path:  'cadastro-categoria',component: PostCategoriaComponent}
 ];
 
 @NgModule({
