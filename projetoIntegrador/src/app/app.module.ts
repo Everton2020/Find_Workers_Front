@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { OrderModule } from 'ngx-order-pipe';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +17,6 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserPerfilComponent } from './user-perfil/user-perfil.component';
 import { CadastreProdutoComponent } from './cadastre-produto/cadastre-produto.component';
-import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
 
 
 @NgModule({
@@ -31,14 +31,14 @@ import { PostCategoriaComponent } from './post-categoria/post-categoria.componen
     PerfilLateralComponent,
     CadastroComponent,
     UserPerfilComponent,
-    CadastreProdutoComponent,
-    PostCategoriaComponent
+    CadastreProdutoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
+    OrderModule,
     FormsModule
   ],
   providers: [],

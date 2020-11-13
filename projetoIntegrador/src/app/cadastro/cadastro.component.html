@@ -20,7 +20,7 @@
 		  <h2 style="margin: 20px;">Faça seu cadastro</h2>
 		  <form>
 		 <input type="text" id="nome" class="fadeIn second zero-raduis" name="nome" placeholder="Entre com seu nome" style="margin: 20px;" [(ngModel)]='user.nome'>
-			<input type="email" id="email" class="fadeIn second zero-raduis" name="email" placeholder="Entre com seu email" style="margin: 20px;" [(ngModel)]='user.email'>
+			<input type="email" id="usuario" class="fadeIn second zero-raduis" name="usuario" placeholder="Entre com seu email" style="margin: 20px;" [(ngModel)]='user.usuario'>
 			
             <input type="password" id="password" class="fadeIn third zero-raduis" name="password" placeholder="Entre com a senha" style="margin: 20px;" (input)='conferirSenha($event)' value="{{senha}}">
             <input type="password" id="password" class="fadeIn third zero-raduis" name="password" placeholder="Confirmar senha" style="margin: 20px;" [(ngModel)]='user.senha'>

@@ -10,7 +10,7 @@ import { CategoriaService } from '../service/categoria.service';
 })
 export class PostCategoriaComponent implements OnInit {
 
-  categoria: Categoria= new Categoria()
+  categoria: Categoria= new Categoria
   listaCategorias: Categoria[]
 
   constructor(
@@ -19,7 +19,7 @@ export class PostCategoriaComponent implements OnInit {
     ) { }
 
   ngOnInit(){
-    this.findAllCategorias( )
+    this.findAllCategorias()
   }
   findAllCategorias()
   {
@@ -33,7 +33,7 @@ export class PostCategoriaComponent implements OnInit {
     })
 }
 cadastrar(){
-  if(this.categoria.nomecateg == null){
+  if(this.categoria.nome == null){
     alert('Preecha o campo categoria corretamente')
   }else{
     this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria)=>{

@@ -2,14 +2,15 @@
 
     <div class="row mt-5 mb-5">
         <div class="col-md-4">
-            <app-user-perfil></app-user-perfil>
+            <!--<app-user-perfil></app-user-perfil>-->
         </div>
         <div class="col-md-8">
             <h3 class="text-center mb-4 text-monospace">Cadastro de uma nova Categoria</h3>
 
             <div class="form-group">
                 <label class="text-monospace" for="texto">Nome da Categoria</label>
-                <input class="form-control" id="texto" rows="3" placeholder="Digite aqui a nova Categoria"[(ngModel)]='categoria.nomecateg'>
+               <input class="form-control" id="texto" rows="3" placeholder="Digite aqui a nova Categoria"
+               [(ngModel)]='categoria.nome'>
             </div>
             <div class="row mb-5">
                 <div class="col-md-12 d-flex justify-content-center">
@@ -35,7 +36,7 @@
                 <tbody>
                   <tr *ngFor='let item of listaCategorias'>
                     <th scope="row">{{item.id}}</th>
-                    <td>{{item.nomecateg}}</td>
+                    <td>{{item.nome}}</td>
                     <td class="d-flex justify-content-end">
                         <a class="btn btn-outline-info mr-3">Editar</a>
 
