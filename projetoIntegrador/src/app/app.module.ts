@@ -18,6 +18,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserPerfilComponent } from './user-perfil/user-perfil.component';
 import { FeedComponent } from './feed/feed.component';
 import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
+import { PutProdutoComponent } from './put-produto/put-produto.component';
+import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
+import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
+import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
 
 
 @NgModule({
@@ -33,7 +37,11 @@ import { PostCategoriaComponent } from './post-categoria/post-categoria.componen
     CadastroComponent,
     UserPerfilComponent,
     FeedComponent,
-    PostCategoriaComponent
+    PostCategoriaComponent,
+    PutProdutoComponent,
+    PutCategoriaComponent,
+    DeleteProdutoComponent,
+    DeleteCategoriaComponent
   ],
   imports: [
     BrowserModule,
