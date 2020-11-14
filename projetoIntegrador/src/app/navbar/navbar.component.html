@@ -1,34 +1,26 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white shift">
-    <a class="navbar-brand" routerLink="/home"><img src="https://i.imgur.com/psuzfmJ.png" alt="logo site" width="60px" height="60px"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<nav class="navbar navbar-expand-lg navbar-light bg-white shift p-0 w-100">
+  <a class="navbar-brand pl-4" routerLink="/home"><img src="https://i.imgur.com/psuzfmJ.png" alt="logo site" width="60px"
+      height="60px"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+    aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
 
-  
-    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/sobre">Sobre</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contato</a>
-        </li>
 
-        <div *ngIf='auth.btnLogin()'>
-          <li class="nav-item">
-            <a class="nav-link" routerLink='/login'>Login</a>
-          </li>
-        </div>
-
-        <div *ngIf='auth.btnSair()'>
-           <li class="nav-item">
-          <a class="nav-link" id="sair" (click)='sair()'>Sair</a>
-        </li>
-      </div>
+  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/sobre">Sobre</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contato</a>
+      </li>
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
           Categorias
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -41,10 +33,21 @@
         </div>
       </li>
 
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2 br-15" style="border-radius: 15px;" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-      </form>
+      
+
+    </ul>
+   <ul class="navbar-nav ml-auto">
+    <div *ngIf='auth.btnLogin()'>
+      <li  class="nav-item">
+        <a class="nav-link" id="login" routerLink='/login'>Login</a>
+      </li>
     </div>
-  </nav>
+
+    <div *ngIf='auth.btnSair()'>
+      <li class="nav-item">
+        <a class="nav-link" id="sair" (click)='sair()'>Sair</a>
+      </li>
+    </div>
+   </ul>
+  </div>
+</nav>

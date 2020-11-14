@@ -9,15 +9,16 @@ export class ProdutoService {
 
   constructor(private http: HttpClient ) { }
 
-    token = {
-      headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
-    }
+  token = {
+    headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
+  }
 
-    getAllProdutos()
+  getAllProdutos()
   {
     return this.http.get('http://localhost:8080/produtos', this.token)
-  }  
-  postProduto(produto: Produto){
+  }
+  postProduto(produto: Produto)
+  {
     return this.http.post('http://localhost:8080/produtos',produto, this.token)
   }
 }

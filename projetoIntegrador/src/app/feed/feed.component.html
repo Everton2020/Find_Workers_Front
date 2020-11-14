@@ -1,0 +1,78 @@
+<div class="container">
+
+    <div class="row">
+  
+      <div class="col-md-4">
+      <app-user-perfil></app-user-perfil>
+      </div>
+  
+      <div class="col-md-8">
+  
+        <div class="form-group">
+          <label class="text-monospace" for="titulo">Nome:</label>
+          <input type="text" class="form-control" id="nome" placeholder="Digite aqui o nome" [(ngModel)]='produto.nome'>
+        </div>
+
+        <div class="form-group">
+            <label class="text-monospace" for="preco">Preco:</label>
+            <input type="text" class="form-control" id="preco" placeholder="Digite aqui o preco" [(ngModel)]='produto.preco'>
+          </div>
+  
+        <div class="form-group">
+            <label class="text-monospace" for="descricao">Descrição:</label>
+            <textarea class="form-control" id="descricao" rows="3" placeholder="Digite aqui a descrição" [(ngModel)]='produto.descricao'></textarea>
+        </div>
+  
+        <div class="row d-flex align-items-end">
+  
+          <div class="col-md-6">
+            <div class="form-group m-0">
+              <label class="text-monospace" for="categoria">Escolha uma categoria ou <a routerLink="#">Cadastre uma nova</a>
+              </label>
+              <select name="categoria" id='categoria' class="form-control" [(ngModel)]='idCategoria' (change)='findByIdCategoria()'>
+                <option *ngFor='let item of listaCategorias' value={{item.id}}>
+                  {{item.nome}}
+                </option>
+              </select>
+            </div>
+          </div>
+  
+          <div class="col-md-6 d-flex justify-content-end">
+              <button type="button" class="btn btn-outline-info w-25" (click)='publicar()'>Publicar</button>
+          </div>
+  
+        </div>
+
+        <!--- PESQUISAR é por aqui -->
+
+        <div class="row">
+          <div class="col-md-12">
+
+
+            <div class="card mt-5" *ngFor='let item of listaProdutos | orderBy : key : reverse'>
+
+              <div class="card-header">
+                <div class="row d-flex align-items-center">
+                  <div class="col-md-8">
+                    <h5 class="card-title">{{item.nome}}</h5>
+                    <small>Categoria: {{item.categoria.nome}}</small>
+                  </div>
+                  <div class="col-md-4 d-flex justify-content-end">
+                    <button class="mr-3 btn btn-outline-info">Editar</button>
+                    <button class="btn btn-outline-danger ml-3">Apagar</button>
+                  </div>
+                </div>
+              </div>
+
+
+            <div class="card-body">
+              <h6 class="card-text" aria-describedby="preco">Preço: ${{item.preco}}</h6>
+              <p class="card-text" aria-describedby="texto"> {{item.descricao}} </p>
+              <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace"></small>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
