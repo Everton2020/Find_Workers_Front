@@ -1,0 +1,48 @@
+<div class="container">
+
+    <div class="row mt-5 mb-5">
+        <div class="col-md-4">
+           <app-user-perfil></app-user-perfil>
+        </div>
+        <div class="col-md-8">
+
+            <div>
+            
+                <div class="form-group">
+                    <label for="nome">Nome do Produto</label>
+                    <input type="text" class="form-control" id="nome"
+                     placeholder="Digite aqui O nome do produto"
+                    [(ngModel)] = 'produto.nome'>
+                </div>
+
+                <div class="form-group">
+                    <label for="preco">Preço do Produto</label>
+                    <input type="text" class="form-control" id="preco"
+                     placeholder="Digite aqui O preco do produto"
+                    [(ngModel)] = 'produto.preco'>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="descricao">Descrição do Produto</label>
+                    <textarea class="form-control" id="descricao" rows="3" placeholder="Digite aqui a descrição so produto" [(ngModel)]='produto.descricao'></textarea>
+                </div>
+
+                <div class="form-group m-0">
+                    <label class="text-monospace" for="categoria">Escolha uma categoria ou <a routerLink="/cadastro-tema">Cadastre uma nova</a></label>
+                    <select name="categoria" id="categoria" [(ngModel)]="idCategoria" (change)="findByIdCategoria()" class="form-control">
+                        <option *ngFor='let item of listaCategorias' value={{item.id}}>{{item.nome}}
+
+                        </option>
+                    </select>
+                </div>
+
+                <div class="d-flex justify-content-end mt-3">
+                    <button type="button" class="btn btn-outline-info w-25" (click)='salvar()'>Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

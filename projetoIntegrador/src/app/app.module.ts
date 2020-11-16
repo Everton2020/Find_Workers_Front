@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { OrderModule } from 'ngx-order-pipe';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserPerfilComponent } from './user-perfil/user-perfil.component';
 import { FeedComponent } from './feed/feed.component';
 import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
+import { PutProdutoComponent } from './put-produto/put-produto.component';
+import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
+import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
+import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
+import { AlertasComponent } from './alertas/alertas.component';
 
 
 @NgModule({
@@ -33,7 +39,12 @@ import { PostCategoriaComponent } from './post-categoria/post-categoria.componen
     CadastroComponent,
     UserPerfilComponent,
     FeedComponent,
-    PostCategoriaComponent
+    PostCategoriaComponent,
+    PutProdutoComponent,
+    PutCategoriaComponent,
+    DeleteProdutoComponent,
+    DeleteCategoriaComponent,
+    AlertasComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +52,8 @@ import { PostCategoriaComponent } from './post-categoria/post-categoria.componen
     FontAwesomeModule,
     HttpClientModule,
     OrderModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
