@@ -15,7 +15,7 @@ export class CategoriaService {
 
   getAllCategorias()
   {
-    return this.http.get('http://localhost:8080/categorias', this.token)
+    return this.http.get('http://localhost:8080/categorias')
   }
   getByIdCategoria(id: number)
   {

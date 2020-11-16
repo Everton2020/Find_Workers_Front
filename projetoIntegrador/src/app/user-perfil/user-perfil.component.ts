@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../model/User';
+import { UserLogin } from '../model/UserLogin';
 
 @Component({
   selector: 'app-user-perfil',
@@ -7,12 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserPerfilComponent implements OnInit {
 
-  nome: string = "Everton";
+  
+
+  nome: string = localStorage.getItem('nome')
+  imagem: string = localStorage.getItem('imagem')
   
   constructor() { }
 
   ngOnInit(){
-   this.nome= 'Everton Souza Silva'
+   
   }
 
 }

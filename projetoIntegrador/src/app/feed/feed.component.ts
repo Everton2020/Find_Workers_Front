@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Categoria } from '../model/categoria';
 import { Produto } from '../model/produto';
+import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
@@ -22,6 +23,7 @@ export class FeedComponent implements OnInit {
   idCategoria: number
 
   constructor(
+    private alerta: AlertasService,
     private produtoService: ProdutoService, 
     private categoriaService: CategoriaService) { }
 
@@ -56,13 +58,13 @@ export class FeedComponent implements OnInit {
 
     if (this.produto.nome == null || this.produto.descricao == null ||  this.produto.preco == null|| this.produto.categoria == null)
     {
-     alert('Preencha todos os campos corretamente')
+     this.alerta.showAlertDanger('Preencha todos os campos corretamente')
     }else
     {
       this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=> {
         this.produto = resp;
         this.produto = new Produto()
-        alert('Produto cadastrado com sucesso')
+        this.alerta.showAlertSuccess('Produto cadastrado com sucesso')
         this.findAllProdutos()
       })
     }
