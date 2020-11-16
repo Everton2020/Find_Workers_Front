@@ -13,6 +13,10 @@ import { ProdutoService } from '../service/produto.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+  key = 'preco'
+  reverse = false
+  
   listaProdutos : Produto []
   faFacebook = faFacebook 
   faInstagram = faInstagram
