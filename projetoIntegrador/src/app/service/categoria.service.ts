@@ -10,7 +10,7 @@ export class CategoriaService {
   constructor(private http: HttpClient ) { }
 
   token = {
-    headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
+    headers: new HttpHeaders().set('Authorization',localStorage.getItem('token'))//environment.token)
   }
 
   getAllCategorias()

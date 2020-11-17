@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Categoria } from '../model/categoria';
 import { Produto } from '../model/produto';
 import { AlertasService } from '../service/alertas.service';
@@ -25,12 +26,24 @@ export class FeedComponent implements OnInit {
   constructor(
     private alerta: AlertasService,
     private produtoService: ProdutoService, 
-    private categoriaService: CategoriaService) { }
+    private categoriaService: CategoriaService,
+    private router:Router  
+    ) { }
 
   ngOnInit(){
+    let token = localStorage.getItem('token')//environment.token
+
+    if(token == null){
+      this.router.navigate(['/login'])
+      this.alerta.showAlertDanger('Faça o login antes de entrar no feed...')
+    }
+    
+    
     window.scroll(0, 0)
     this.findAllCategorias()
     this.findAllProdutos()
+
+    
   }
   
   findAllProdutos()

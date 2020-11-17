@@ -23,9 +23,9 @@ export class AuthService {
   btnSair()
   {
     let ok = false
-    let token = localStorage.getItem('token')
+    let token = localStorage.getItem('token')//environment.token
 
-    if(token != null)
+    if(token != null) 
     {
       ok = true
     }
@@ -34,7 +34,7 @@ export class AuthService {
   btnLogin()
   {
     let ok = false
-    let token = localStorage.getItem('token')
+    let token = localStorage.getItem('token')//environment.token
 
     if(token == null)
     {
