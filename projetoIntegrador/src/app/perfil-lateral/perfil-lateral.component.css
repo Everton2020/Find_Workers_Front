@@ -1,42 +1,35 @@
 .arredondar{
-    border-radius: 50%; /* melhorar redondamento das fotos*/
-    width: 100%;
-    height: 190px;
+  border-radius: 50%; 
+  width: 190px;
+  height: 190px;
 }
 .card-perfil
 {
-border-color: rgb(0, 0, 0);
+border-color: rgb(255, 253, 253);
 text-align: center;
 margin: 7px;
 }
+p{
+ font-size: 24pt;
+}
 
+img:hover{
+box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.90); 
+cursor: pointer;
+width: 200px;
+transition: 1s;
+}
 
-ul.social-network {
-    list-style: none;
-    display: inline;
-  
-    padding: 0;
-  }
-  
-  ul.social-network li {
-    display: inline;
-    margin: 0;
-    padding: 5px;
-  }
-  
-  .faFacebook, .faLinkedin, .faInstagram{
-      color:"null";
-  }
-  
-  .faFacebook:hover{
-    color: #3b5998;
-  }
-  
-  .faLinkedin:hover{
-  color: #0072b1;
-  }
-  
-  .faInstagram:hover{
-  color: #C13584;
-  }
-  
+.fa-github {
+  color: #000000;
+  font-size: 25px;
+  margin-right: 10px;
+}
+.fa-linkedin-in {
+  color: #000000;
+  font-size: 25px;
+}
+
+#textoSobre {
+  font-size: 15pt;
+}

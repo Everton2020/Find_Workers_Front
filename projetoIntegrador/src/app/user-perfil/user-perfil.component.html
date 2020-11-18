@@ -1,13 +1,13 @@
-
-<div class="card border-0" style="width: 15rem;">
-
-    <div class="d-flex justify=content-center">
-        <img class="card-img-top w-80 fotos-perfil" src="{{imagem}}" alt="Imagem de capa do card">
+  <div class="card border-0" style="width: 15rem;">
+  
+      <div class="d-flex justify=content-center">
+          <img class="card-img-top w-80 fotos-perfil" src="{{imagem}}" alt="Imagem de capa do card">
+      </div>
+  
+      
+      <div class="card-body">
+        <h5 class="card-title text-center text-monospace" [(ngModel)]='user.nome'>{{nome}}</h5>
+        <a  class="btn btn-info mb-3 d-flex justify-content-center" routerLink='/post-produto'>Cadastrar Produto</a>
+        <a  class="btn btn-primary mb-3 d-flex justify-content-center" routerLink='/cadastro-categoria'>Cadastrar Categoria</a>
+      </div>
     </div>
-
-    
-    <div class="card-body">
-      <h5 class="card-title text-center text-monospace">{{nome}}</h5>
-      <p class="card-text text-center text-monospace"></p>
-    </div>
-  </div>

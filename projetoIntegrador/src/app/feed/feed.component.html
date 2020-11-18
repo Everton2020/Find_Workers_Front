@@ -2,72 +2,53 @@
 
     <div class="row">
   
-      <div class="col-md-4">
-      <app-user-perfil></app-user-perfil>
-      </div>
-  
-      <div class="col-md-8">
-  
-        <div class="form-group">
-          <label class="text-monospace" for="titulo">Nome:</label>
-          <input type="text" class="form-control" id="nome" placeholder="Digite aqui o nome" [(ngModel)]='produto.nome'>
-        </div>
-
-        <div class="form-group">
-          <label class="text-monospace" for="imagem">Imagem</label>
-          <input type="text" class="form-control" id="imagem" placeholder="Digite aqui o nome" [(ngModel)]='produto.imagem'>
-        </div>
-
-        <div class="form-group">
-            <label class="text-monospace" for="preco">Preco:</label>
-            <input type="text" class="form-control" id="preco" placeholder="Digite aqui o preco" [(ngModel)]='produto.preco'>
-          </div>
-  
-        <div class="form-group">
-            <label class="text-monospace" for="descricao">Descrição:</label>
-            <textarea class="form-control" id="descricao" rows="3" placeholder="Digite aqui a descrição" [(ngModel)]='produto.descricao'></textarea>
-        </div>
-  
-        <div class="row d-flex align-items-end">
-  
-          <div class="col-md-6">
-            <div class="form-group m-0">
-              <label class="text-monospace" for="categoria">Escolha uma categoria ou <a routerLink='/cadastro-categoria'>Cadastre uma nova</a>
-              </label>
-              <select name="categoria" id='categoria' class="form-control" [(ngModel)]='idCategoria' (change)='findByIdCategoria()'>
-                <option *ngFor='let item of listaCategorias' value={{item.id}}>
-                  {{item.nome}}
-                </option>
-              </select>
+      <div class="col-md-3">
+        <div class="card border-0" style="width: 15rem;">
+        
+            <div class="d-flex justify=content-center">
+                <img class="card-img-top w-80 fotos-perfil" src="{{imagem}}" alt="Imagem de capa do card">
+            </div>
+        
+            
+            <div class="card-body">
+              <h5 class="card-title text-center text-monospace" [(ngModel)]='user.nome'>{{nome}}</h5>
+              <a  class="btn btn-info mb-3 d-flex justify-content-center" routerLink='/post-produto'>Cadastrar Produto</a>
+              <a  class="btn btn-primary mb-3 d-flex justify-content-center" routerLink='/cadastro-categoria'>Cadastrar Categoria</a>
             </div>
           </div>
-  
-          <div class="col-md-6 d-flex justify-content-end">
-              <button type="button" class="btn btn-outline-info w-25" (click)='publicar()'>Publicar</button>
-          </div>
-  
         </div>
 
         <!--- PESQUISAR é por aqui -->
-      < <div class="container-fluid">
       
-        <div class="row justify-content-center">
-            <div class="card mt-5" *ngFor = 'let item of listaProdutos | orderBy : key : reverse'>
+        <div class="col-md-9">
+          <div class="card-columns">
       
-              <div class="card transition" style="width: 18rem;">
-                <img class="card-img-top imagem-produto" src="{{item.imagem}}" alt="Imagem de capa do card">
+              <div class="card transition ml-5 mt-4" style="width: 17rem;" *ngFor = 'let item of listaProdutos | orderBy : key : reverse'>
+                <img class="card-img-top imagem-produto img-fluid" src="{{item.imagem}}" alt="Imagem de capa do card">
             
-                <div class="card-body">
+                <div class="card-body text-center">
                     <h5>{{item.nome}}</h5>
+                    <h5>R${{item.preco}}</h5>
                     <hr>
                   <p class="card-text">{{item.descricao}}</p>
                   <a href="#" class="btn btn-primary">Comprar</a>
                 </div>
+
+                <div class="card-footer">
+                  <div class="d-flex justify-content-center">
+
+                    <button class="mr-3 btn btn-info" [routerLink]="['/editar-produto', item.id]">
+                        Editar
+                    </button>
+
+                    <button class="btn btn-danger ml-3" [routerLink]="['/delete-produto', item.id]">
+                        Apagar
+                    </button>
+
+                </div>
+
+                </div>
               </div>
-      
-      
+          </div>
             </div>
         </div>
-      
-        </div>
-      </div>

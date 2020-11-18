@@ -9,10 +9,11 @@ import { UserLogin } from '../model/UserLogin';
 })
 export class UserPerfilComponent implements OnInit {
 
-  
+  user: User = new User()
 
   nome: string = localStorage.getItem('nome')
   imagem: string = localStorage.getItem('imagem')
+  usuario: string = localStorage.getItem('usuario')
   
   constructor() { }
 

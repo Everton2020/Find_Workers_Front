@@ -24,6 +24,7 @@ import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
 import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
 import { AlertasComponent } from './alertas/alertas.component';
+import { PostProdutoComponent } from './post-produto/post-produto.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { AlertasComponent } from './alertas/alertas.component';
     PutCategoriaComponent,
     DeleteProdutoComponent,
     DeleteCategoriaComponent,
-    AlertasComponent
+    AlertasComponent,
+    PostProdutoComponent,
   ],
   imports: [
     BrowserModule,

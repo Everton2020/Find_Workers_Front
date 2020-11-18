@@ -15,20 +15,20 @@ export class ProdutoService {
 
   getAllProdutos()
   {
-    return this.http.get('http://localhost:8080/produtos')
+    return this.http.get('https://findworkers1.herokuapp.com/produtos')
   }
   getByIdProduto(id:number){
-    return this.http.get(`http://localhost:8080/produtos/id/${id}`, this.token)
+    return this.http.get(`https://findworkers1.herokuapp.com/produtos/id/${id}`, this.token)
   }
   postProduto(produto: Produto)
   {
-    return this.http.post('http://localhost:8080/produtos',produto, this.token)
+    return this.http.post('https://findworkers1.herokuapp.com/produtos',produto, this.token)
   }
   putProduto(produto: Produto){
-    return this.http.put('http://localhost:8080/produtos',produto, this.token)
+    return this.http.put('https://findworkers1.herokuapp.com/produtos',produto, this.token)
   }
   deleteProduto(id:number){
-    return this.http.delete(`http://localhost:8080/produtos/id/${id}`, this.token)
+    return this.http.delete(`https://findworkers1.herokuapp.com/produtos/id/${id}`, this.token)
   }
 
 }

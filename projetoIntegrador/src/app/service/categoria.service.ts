@@ -10,27 +10,27 @@ export class CategoriaService {
   constructor(private http: HttpClient ) { }
 
   token = {
-    headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
+    headers: new HttpHeaders().set('Authorization',localStorage.getItem('token'))//environment.token)
   }
 
   getAllCategorias()
   {
-    return this.http.get('http://localhost:8080/categorias')
+    return this.http.get('https://findworkers1.herokuapp.com/categorias')
   }
   getByIdCategoria(id: number)
   {
-    return this.http.get(`http://localhost:8080/categorias/id/${id}`, this.token)
+    return this.http.get(`https://findworkers1.herokuapp.com/categorias/id/${id}`, this.token)
   }
 
   postCategoria(categoria: Categoria){
-    return this.http.post('http://localhost:8080/categorias', categoria, this.token)
+    return this.http.post('https://findworkers1.herokuapp.com/categorias', categoria, this.token)
   }
   putCategoria(categoria: Categoria){
-    return this.http.put('http://localhost:8080/categorias', categoria, this.token)
+    return this.http.put('https://findworkers1.herokuapp.com/categorias', categoria, this.token)
   }
   deleteCategoria(id: number)
   {
-    return this.http.delete(`http://localhost:8080/categorias/id/${id}`, this.token)
+    return this.http.delete(`https://findworkers1.herokuapp.com/categorias/id/${id}`, this.token)
   }
   
 }

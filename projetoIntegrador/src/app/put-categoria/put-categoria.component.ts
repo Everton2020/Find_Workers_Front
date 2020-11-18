@@ -34,7 +34,7 @@ export class PutCategoriaComponent implements OnInit {
   salvar(){
     this.categoriaService.putCategoria(this.categoria).subscribe((resp:Categoria)=>{
       this.categoria = resp
-      this.router.navigate(['/feed'])
+      this.router.navigate(['/perfil'])
       this.alerta.showAlertSuccess('Categoria atualizada com sucesso!')
     })
   }

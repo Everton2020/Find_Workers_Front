@@ -12,20 +12,20 @@ export class AuthService {
 
   logar(userLogin: UserLogin)
   {
-    return this.http.post('http://localhost:8080/usuarios/logar' , userLogin)
+    return this.http.post('https://findworkers1.herokuapp.com/usuarios/logar' , userLogin)
   }
 
   cadastrar(user: User)
   {
-    return this.http.post('http://localhost:8080/usuarios/cadastrar' , user)
+    return this.http.post('https://findworkers1.herokuapp.com/usuarios/cadastrar' , user)
   }
 
   btnSair()
   {
     let ok = false
-    let token = localStorage.getItem('token')
+    let token = localStorage.getItem('token')//environment.token
 
-    if(token != null)
+    if(token != null) 
     {
       ok = true
     }
@@ -34,7 +34,7 @@ export class AuthService {
   btnLogin()
   {
     let ok = false
-    let token = localStorage.getItem('token')
+    let token = localStorage.getItem('token')//environment.token
 
     if(token == null)
     {

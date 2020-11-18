@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Categoria } from '../model/categoria';
+import { User } from '../model/User';
 import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
 
@@ -11,8 +12,15 @@ import { CategoriaService } from '../service/categoria.service';
 })
 export class PostCategoriaComponent implements OnInit {
 
+  user: User = new User()
+
+  nome: string = localStorage.getItem('nome')
+  imagem: string = localStorage.getItem('imagem')
+  usuario: string = localStorage.getItem('usuario')
+
   categoria:Categoria = new Categoria()
   listaCategorias: Categoria[]
+  
   constructor(
     private alerta: AlertasService,
     private categoriaService: CategoriaService,
@@ -41,7 +49,7 @@ export class PostCategoriaComponent implements OnInit {
     }else{
       this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria)=>{
         this.categoria = resp
-        this.router.navigate(['/feed'])
+        this.router.navigate(['/perfil'])
         this.alerta.showAlertSuccess('Categoria cadastrada com sucesso')
       })
     }

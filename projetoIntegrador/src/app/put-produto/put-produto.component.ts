@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from '../model/categoria';
 import { Produto } from '../model/produto';
+import { User } from '../model/User';
 import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
@@ -13,12 +14,19 @@ import { ProdutoService } from '../service/produto.service';
 })
 export class PutProdutoComponent implements OnInit {
 
+  user: User = new User()
+
   produto: Produto = new Produto()
   idProduto: number
 
   categoria: Categoria = new Categoria()
   listaCategorias: Categoria[]
   idCategoria: number
+
+  nome: string = localStorage.getItem('nome')
+  imagem: string = localStorage.getItem('imagem')
+  usuario: string = localStorage.getItem('usuario')
+
   constructor(
     private categoriaService:CategoriaService,
     private produtoService: ProdutoService,
@@ -46,11 +54,11 @@ export class PutProdutoComponent implements OnInit {
 
     this.produtoService.putProduto(this.produto).subscribe((resp: Produto)=>{
       this.produto = resp
-      this.router.navigate(['/feed'])
-      this.alerta.showAlertSuccess('Postagem alterada com sucesso!')
+      this.router.navigate(['/perfil'])
+      this.alerta.showAlertSuccess('Produto alterado com sucesso!')
     },err=>{
       if(err.status == '500'){
-        this.alerta.showAlertDanger('Preencha todos os campos corretamente antes de enviar!')
+        this.alerta.showAlertDanger('Preencha todos os campos corretamente antes de alterar!')
       }
     })
   }

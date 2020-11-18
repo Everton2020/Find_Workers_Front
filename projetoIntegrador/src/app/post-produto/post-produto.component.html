@@ -1,0 +1,65 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<div class="container ">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card border-0" style="width: 15rem;">
+      
+          <div class="d-flex justify=content-center">
+              <img class="card-img-top w-80 fotos-perfil" src="{{imagem}}" alt="Imagem de capa do card">
+          </div>
+      
+          
+          <div class="card-body">
+            <h5 class="card-title text-center text-monospace" [(ngModel)]='user.nome'>{{nome}}</h5>
+            <a  class="btn btn-info mb-3 d-flex justify-content-center" routerLink='/post-produto'>Cadastrar Produto</a>
+            <a  class="btn btn-primary mb-3 d-flex justify-content-center" routerLink='/cadastro-categoria'>Cadastrar Categoria</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8 d-flex justify-content-center">
+
+        <div class="wrapper fadeInDown zero-raduis">
+          <div id="formContent">
+            <!-- Tabs Titles -->
+    
+            <!-- Icon -->
+            <div class="fadeIn first" style="justify-content: center;">
+        
+                
+             
+            </div>
+    
+          <!-- Produto Form Form -->
+    
+            <h2 style="margin: 20px;">Crie seu produto</h2>
+             <input type="text" id="nome" class="fadeIn second zero-raduis" name="nome" placeholder="Entre com o nome do produto" style="margin: 20px;" [(ngModel)]='produto.nome'>
+             
+             <input type="text" id="descricao" class="fadeIn second zero-raduis" name="descricao" placeholder="Entre com a descricao" style="margin: 20px;" [(ngModel)]='produto.descricao'>
+    
+             <input type="text" id="preco" class="fadeIn second zero-raduis" name="preco" placeholder="Entre com o preco" style="margin: 20px;" [(ngModel)]='produto.preco'>
+    
+             <select name="categoria" id='categoria' class="form-control" style="margin: 20px;" [(ngModel)]='idCategoria' (change)='findByIdCategoria()'>
+               <option *ngFor='let item of listaCategorias' value="{{item.id}}">{{item.nome}}</option>
+             </select>
+          
+              <div id="formFooter">
+        </div>
+          <input type="text" id="imagem" class="fadeIn second zero-raduis" name="imagem" placeholder="Insira a URL da imagem" style="margin: 20px;" [(ngModel)]='produto.imagem'>
+          
+                <input type="submit" class="fadeIn fourth" value="publicar" style="border-radius: 20px; margin: 30px;" (click)='publicar()'>
+                
+                  </div>
+            
+           </div>
+
+      </div>
+
+  </div>
+
+<!------ Include the above in your HEAD tag ---------->
+ 
+ </div>

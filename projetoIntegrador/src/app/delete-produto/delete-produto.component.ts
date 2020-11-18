@@ -2,6 +2,7 @@ import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Produto } from '../model/produto';
+import { User } from '../model/User';
 import { AlertasService } from '../service/alertas.service';
 import { ProdutoService } from '../service/produto.service';
 
@@ -12,7 +13,16 @@ import { ProdutoService } from '../service/produto.service';
 })
 export class DeleteProdutoComponent implements OnInit {
 
-  produto: Produto = new Produto
+  produto: Produto = new Produto()
+  listaProdutos: Produto[]
+
+  user: User = new User()
+
+  nome: string = localStorage.getItem('nome')
+  imagem: string = localStorage.getItem('imagem')
+  usuario: string = localStorage.getItem('usuario')
+
+
   constructor(
     private ProdutoService: ProdutoService,
     private router: Router,
@@ -33,11 +43,11 @@ export class DeleteProdutoComponent implements OnInit {
   }
   btnSim(){
     this.ProdutoService.deleteProduto(this.produto.id).subscribe(()=>{
-      this.router.navigate(['/feed'])
+      this.router.navigate(['/perfil'])
       this.alerta.showAlertSuccess('Produto apagado com sucesso!!')
     })
   }
   btnNao(){
-    this.router.navigate(['/feed'])
+    this.router.navigate(['/perfil'])
   }
 }

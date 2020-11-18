@@ -27,8 +27,11 @@ body{
  width: 285.2px;
  height: 250px;
 }
-.card-produto
+.fotos-perfil
 {
-    display: inline;
+    margin-top: 50px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
 }
 
