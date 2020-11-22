@@ -3,15 +3,15 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <!------ Include the above in your HEAD tag ---------->
-
+<div style="background-image: url(https://i.imgur.com/Aku2PL2.png); height: 660px; width: 100%;">
 <div class="wrapper fadeInDown zero-raduis">
-  	  <div id="formContent">
+  	  <div id="formContent" style="left: 350px;">
   	    <!-- Tabs Titles -->
 
   	    <!-- Icon -->
   	    <div class="fadeIn first">
 			<img src="https://i.imgur.com/Kjcuuk4.png" id="icon" alt="User Icon" style="margin-top: 20px; margin-bottom: 20px;">
-			<h4 style="margin-bottom: 20px;">LOGIN</h4>
+			<h4 style="margin-bottom: 20px; color: #3f8db4">LOGIN</h4>
   	    </div>
 
   	    <!-- Login Form -->
@@ -20,11 +20,12 @@
             <input type="password" id="password" class="fadeIn third zero-raduis" name="password" placeholder="Entre com a senha" [(ngModel)]='userLogin.senha'>
 		      <div id="formFooter">
   	      </div>
-  	      <input type="submit" class="fadeIn fourth" value="login" style="border-radius: 20px; margin-top: 10px;" (click)='entrar()'>
+  	      <input type="submit" class="fadeIn fourth" value="login" style="border-radius: 20px; margin-top: 10px; font-weight: bolder;" (click)='entrar()'>
   	      <h2>Não tem uma conta?</h2>
-            <input type="button" class="fadeIn fourth pc" value="Criar conta" style="border-radius: 20px;" routerLink='/cadastro'>
+            <input type="button" class="fadeIn fourth pc" value="Criar conta" style="font-weight: bolder;border-radius: 20px ;" routerLink='/cadastro'>
   	    </form>
   	    
 
   	  </div>
   </div>
+</div>

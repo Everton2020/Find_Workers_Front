@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
   user: User = new User()
   senha: string
   nome: string
+  usuario: string
 
 
   constructor(
@@ -36,7 +37,20 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('token',this.userLogin.token)
           localStorage.setItem('nome', this.userLogin.nome)
           localStorage.setItem('imagem', this.userLogin.imagem)
-          this.router.navigate(['/home'])
-        })
+          this.router.navigate(['/perfil'])
+        }, erro=> {
+          if(erro.status=="500"){
+            this.alerta.showAlertDanger("Dados Incorretos")
+            }
+            else
+            {
+            this.alerta.showAlertDanger("Dados Incorretos")
+            }
+            })
       }
   }
+
+
+
+  
+

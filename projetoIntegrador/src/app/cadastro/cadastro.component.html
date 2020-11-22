@@ -4,9 +4,9 @@
 
 
 <!------ Include the above in your HEAD tag ---------->
-
+<div style="background-image: url(https://i.imgur.com/Aku2PL2.png); height: 600px; width: 100%;">
 <div class="wrapper fadeInDown zero-raduis">
-  	  <div id="formContent">
+  	  <div id="formContent"  style="left: 350px; height: 550px;">
   	    <!-- Tabs Titles -->
 
   	    <!-- Icon -->
@@ -17,19 +17,20 @@
   	    </div>
 
 		  <!-- Cadastro Form -->
-		  <h3 style="margin: 20px;">Faça seu cadastro</h3>
+		  <h3 style="margin-top: 20px;">Faça seu cadastro</h3>
 		  
-		 <input type="text" id="nome" class="fadeIn second zero-raduis" name="nome" placeholder="Entre com seu nome" style="margin: 20px;" [(ngModel)]='user.nome'>
-			<input type="email" id="usuario" class="fadeIn second zero-raduis" name="usuario" placeholder="Entre com seu email" style="margin: 20px;" [(ngModel)]='user.usuario'>
+		 <input type="text" id="nome" class="fadeIn second zero-raduis" name="nome" placeholder="Entre com seu nome" style="margin: 15px;" [(ngModel)]='user.nome'>
+			<input type="email" id="usuario" class="fadeIn second zero-raduis" name="usuario" placeholder="Entre com seu email" style="margin: 15px;" [(ngModel)]='user.usuario'>
 			
-            <input type="password" id="password" class="fadeIn third zero-raduis" name="password" placeholder="Entre com a senha" style="margin: 20px;" (input)='conferirSenha($event)' value="{{senha}}">
-            <input type="password" id="passwordconfirm" class="fadeIn third zero-raduis" name="password" placeholder="Confirmar senha" style="margin: 20px;" [(ngModel)]='user.senha'>
+            <input type="password" id="password" class="fadeIn third zero-raduis" name="password" placeholder="Entre com a senha" style="margin: 15px;" (input)='conferirSenha($event)' value="{{senha}}">
+            <input type="password" id="passwordconfirm" class="fadeIn third zero-raduis" name="password" placeholder="Confirmar senha" style="margin: 15px;" [(ngModel)]='user.senha'>
 		      <div id="formFooter">
 			</div>
-			<input type="text" id="imagem" class="fadeIn second zero-raduis" name="imagem" placeholder="Insira sua imagem" style="margin: 20px;" [(ngModel)]='user.imagem'>
-  	      <input type="submit" class="fadeIn fourth" value="Cadastrar-se" style="border-radius: 20px; margin: 30px;" (click)='cadastrar()'>
+			<input type="text" id="imagem" class="fadeIn second zero-raduis" name="imagem" placeholder="Insira sua imagem" style="margin: 15px;" [(ngModel)]='user.imagem'>
+  	      <input type="submit" class="fadeIn fourth" value="Cadastrar-se" style="border-radius: 20px; margin: 20px; font-weight: bolder;" (click)='cadastrar()'>
   	    
   	    
 
   	  </div>
   </div>
+</div>

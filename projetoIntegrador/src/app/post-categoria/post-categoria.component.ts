@@ -49,7 +49,7 @@ export class PostCategoriaComponent implements OnInit {
     }else{
       this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria)=>{
         this.categoria = resp
-        this.router.navigate(['/perfil'])
+        this.router.navigate(['/cadastro-categoria'])
         this.alerta.showAlertSuccess('Categoria cadastrada com sucesso')
       })
     }

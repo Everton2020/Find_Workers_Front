@@ -268,3 +268,66 @@ input[type=text]:placeholder, input[type=email]:placeholder, input[type=password
 #icon {
   width:30%;
 }
+
+.btn {
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.8s;
+  cursor: pointer;
+  font-weight: bolder;
+  border-radius: 8px;
+}
+  
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: 2px solid #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #085fbd;
+  border: 2px solid #085fbd;
+  color: white;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  color: white;
+  border: 2px solid #17a2b8;
+}
+
+.btn-info:hover {
+  background-color: #0e6674;
+  border: 2px solid #0e6674;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #f00e25;
+  color: white;
+  border: 2px solid #f00e25;
+}
+.btn-danger:hover {
+  background-color: #be0d1f;
+  border: 2px solid #be0d1f;
+  color: white;
+}
+
+.btn-success {
+  background-color: #1adb47;
+  color: white;
+  border: 2px solid #1adb47;
+}
+
+.btn-success:hover {
+  background-color: #179c36;
+  border: 2px solid #179c36;
+  color: white;
+}
+
