@@ -12,12 +12,12 @@ export class AuthService {
 
   logar(userLogin: UserLogin)
   {
-    return this.http.post('https://findworkers1.herokuapp.com/usuarios/logar' , userLogin)
+    return this.http.post('https://findworkersbrazil.herokuapp.com/usuarios/logar' , userLogin)
   }
 
   cadastrar(user: User)
   {
-    return this.http.post('https://findworkers1.herokuapp.com/usuarios/cadastrar' , user)
+    return this.http.post('https://findworkersbrazil.herokuapp.com/usuarios/cadastrar' , user)
   }
 
   btnSair()

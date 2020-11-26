@@ -1,29 +1,17 @@
 <div class="container mb-5">
 
     <div class="row">
-  
       <div class="col-md-3">
-        <div class="card border-0" style="width: 15rem;">
-        
-            <div class="d-flex justify=content-center">
-                <img class="card-img-top w-80 fotos-perfil" src="{{imagem}}" alt="Imagem de capa do card">
-            </div>
-        
-            
-            <div class="card-body">
-              <h5 class="card-title text-center text-monospace" [(ngModel)]='user.nome'>{{nome}}</h5>
-              <a  class="btn btn-info mb-3 d-flex justify-content-center" routerLink='/post-produto'>Cadastrar Produto</a>
-              <a  class="btn btn-primary mb-3 d-flex justify-content-center" routerLink='/cadastro-categoria'>Cadastrar Categoria</a>
-            </div>
-          </div>
-        </div>
+        <app-user-perfil></app-user-perfil>
+      </div>
+    
 
         <!--- PESQUISAR é por aqui -->
       
         <div class="col-md-9">
           <div class="card-columns">
       
-              <div class="card transition ml-5 mt-4" style="width: 17rem;" *ngFor = 'let item of listaProdutos | orderBy : key : reverse'>
+              <div class="card transition ml-4 mt-3 mb-5" style="width: 16rem;" *ngFor = 'let item of listaProdutos | orderBy : key : reverse'>
                 <img class="card-img-top imagem-produto img-fluid" src="{{item.imagem}}" alt="Imagem de capa do card">
             
                 <div class="card-body text-center">
@@ -52,4 +40,4 @@
           </div>
             </div>
         </div>
-      </div>
+</div>

@@ -2,18 +2,21 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<div class="container">
+
+<div class="container ">
   <div class="row">
-    <div class="col-md-4">
-      <div class="card border-0" style="width: 15rem;">
+    
+    <div class="col-md-3">
+      <div class="card border border-gray">
       
           <div class="d-flex justify=content-center">
-              <img class="card-img-top w-80 fotos-perfil" src="{{imagem}}" alt="Imagem de capa do card">
+              <img class="card-img-top fotos-perfil" src="{{imagem}}" alt="Imagem de capa do card" style="width: 200px ; height: 200px ;">
           </div>
       
           
           <div class="card-body">
-            <h5 class="card-title text-center text-monospace" [(ngModel)]='user.nome'>{{nome}}</h5>
+            <h5 class="card-title text-center text-monospace" [(ngModel)]='user.nome' style="font-weight: bolder; font-family:Verdana, Geneva, Tahoma, sans-serif">{{nome}}</h5>
+            <hr>
             <a  class="btn btn-info mb-3 d-flex justify-content-center" routerLink='/post-produto'>Cadastrar Produto</a>
             <a  class="btn btn-primary mb-3 d-flex justify-content-center" routerLink='/cadastro-categoria'>Cadastrar Categoria</a>
           </div>
@@ -50,7 +53,7 @@
         </div>
           <input type="text" id="imagem" class="fadeIn second zero-raduis" name="imagem" placeholder="Insira a URL da imagem" style="margin: 20px;" [(ngModel)]='produto.imagem'>
           
-                <input type="submit" class="fadeIn fourth" value="salvar" style="border-radius: 20px; margin: 30px; font-weight: bolder;" (click)='salvar()'>
+                <input type="submit" class="fadeIn fourth" value="salvar" style="border-radius: 20px; margin: 30px;" (click)='salvar()'>
                 
                   </div>
             
